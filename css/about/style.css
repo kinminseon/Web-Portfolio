@@ -1,0 +1,162 @@
+/* about style.css */
+
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+@font-face {
+ font-family: 'NanumSquare';
+ font-weight: 300;
+ src: url(../../fonts/NanumSquareL.eot);
+ src: url(../../fonts/NanumSquareL.eot?#iefix) format('embedded-opentype'),
+      url(../../fonts/NanumSquareL.woff) format('woff'),
+      url(../../fonts/NanumSquareL.ttf) format('truetype');
+}
+@font-face {
+ font-family: 'NanumSquare';
+ font-weight: 400;
+ src: url(../../fonts/NanumSquareR.eot);
+ src: url(../../fonts/NanumSquareR.eot?#iefix) format('embedded-opentype'),
+      url(../../fonts/NanumSquareR.woff) format('woff'),
+      url(../../fonts/NanumSquareR.ttf) format('truetype');
+}
+@font-face {
+ font-family: 'NanumSquare';
+ font-weight: 700;
+ src: url(../../fonts/NanumSquareB.eot);
+ src: url(../../fonts/NanumSquareB.eot?#iefix) format('embedded-opentype'),
+      url(../../fonts/NanumSquareB.woff) format('woff'),
+      url(../../fonts/NanumSquareB.ttf) format('truetype');
+}
+@font-face {
+ font-family: 'NanumSquare';
+ font-weight: 800;
+ src: url(../../fonts/NanumSquareEB.eot);
+ src: url(../../fonts/NanumSquareEB.eot?#iefix) format('embedded-opentype'),
+      url(../../fonts/NanumSquareEB.woff) format('woff'),
+      url(../../fonts/NanumSquareEB.ttf) format('truetype');
+}
+
+*{
+  font-family: 'NanumSquare', sans-serif;
+}
+
+#wrap{width: 100%;}
+
+#content>div{width: 100%; padding-bottom: 130px;}
+#content>div:nth-child(1){background-color: #f6f6f6;}
+
+/* ****************** #title 제목 ****************** */
+
+.title{width: 100%;}
+.title h3{display: block; width:100%; height: auto; font-family: 'Abril Fatface', cursive; font-size: 55px; font-weight:100; line-height: 70px; text-align: left; color: #333;}
+.title span{display: block; width: 60px; height: 2px; margin: 69px 0 54px; background-color: #111;}
+.title p{width: 100%; height: 9px; font-family:'NanumSquare', sans-serif; font-size: 9pt; text-align: center; line-height: 9px; color: #666;}
+
+/* ****************** about ****************** */
+
+#about {max-width:1130px; margin: 0 auto; padding: 180px 15px 0 15px; box-sizing: border-box;}
+
+.about{width: 100%;}
+
+.about>div{display: table; width: 100%; padding: 15px 0 15px; border-bottom: 1px solid #ddd; box-sizing: border-box;}
+.title_sub{width: 25%; float: left;}
+.title_sub span{display: inline-block; height: 20px; padding-right: 10px; border-bottom: 15px solid #ffc63e; font-family: 'Abril Fatface', cursive ; font-size: 30px; font-weight: 100;}
+
+.cont_sub{width: 75%; float: left; font-size:0; letter-spacing: -5px;}
+.cont_sub li{display:inline-block; width: 100%; margin-bottom: 15px; letter-spacing: 0px; font-size: 18px;}
+.cont_sub li strong{width: 40%; float: left; line-height: 30px; font-family: 'Abril Fatface', cursive;}
+.cont_sub li p{width: 60%; float: left; font-size: 16px; line-height: 30px;}
+
+
+
+/* ****************** skill ****************** */
+
+#skill {max-width:1130px; margin: 0 auto; padding: 80px 15px 0 15px; box-sizing: border-box;}
+
+#skill ul{max-width: 960px; margin: 100px auto 0;}
+#skill ul li{width: 20%; height: 237px; padding: 0 10px; float: left; box-sizing: border-box;}
+#skill ul li img{display: block; max-width: 100%; margin: 15px auto 0;}
+#skill ul li p{height: 14px; margin-top: 28px; font-family:'NanumSquare', sans-serif; font-size:10.5pt;  text-align: center; line-height: 14px;}
+
+.container {width: 100%; max-width: 1130px; height: 475px; margin-top: 95px;}
+
+.skill_title {height:30px; margin-bottom:10px; line-height:30px; font-family: 'NanumSquare', sans-serif; font-size: 16px; color: #333; transform:skew(-0.001deg);}
+.bar {width: 100%; height: 35px; background: #fff; border-radius: 5px; position: relative; transition: all 2s linear; background-color: #ececec;}
+.bar-1{width: 100%; margin: 0px auto 25px;}
+
+.bar-inner { width: 0; height: 35px; line-height: 35px; background: #ffc63e; border-radius: 5px 0 0 5px;}
+
+.bar-percent {position: absolute; right: 10px; top: 9px; font-family: 'NanumSquare', sans-serif; font-size: 14px; font-weight: bold;}
+
+
+/* 
+====================================================================
+    footer
+====================================================================
+*/
+
+footer{width: 100%; height: 115px; border-top: 1px solid  #ddd; box-shadow:border-box;}
+#inner_footer {max-width:1100px; height: 55px; margin: 30px auto;}
+#inner_footer p{height: 15px; font-size: 9pt; text-align: center; letter-spacing:1px;}
+
+#inner_footer .top{width: 90px; height: 20px; margin: 20px auto 0; background-color: #333; border-radius:30px;}
+#inner_footer a{display: block; width: 90px; height:20px; border-radius: 20px; color: #fff; font-size:9pt; text-align: center; line-height:20px; font-weight: 700;}
+#inner_footer a i{color: #fff; line-height:20px;}
+
+
+/* 767px - 480px */
+
+@media screen and (max-width: 767px){
+
+#content>div{padding-bottom: 100px;}
+.title h3{font-size: 45px; line-height: 60px;}
+.title span{margin: 49px 0 19px;}
+
+/* ****************** about ****************** */
+
+#about {padding: 120px 20px 0 20px;}
+.about>div{padding: 30px 0 30px;}
+
+.title_sub{margin-bottom: 30px; clear: both;}
+
+.cont_sub{width: 100%; clear: both;}
+.cont_sub li{width: 100%; margin-bottom: 15px;}
+.cont_sub li strong{width: 36%; margin-right: 4%;}
+    
+
+/* ****************** skill ****************** */
+
+#skill {padding-top: 80px;}
+.container {margin-top: 59px;}
+
+    
+}
+
+/* 479px - 320px */
+
+@media screen and (max-width: 479px){
+
+#content>div{padding-bottom: 70px;}
+.title h3{font-size: 40px; line-height: 50px;}
+.title span{margin: 39px 0 9px;}
+    
+/* ****************** about ****************** */
+
+#about {padding: 100px 20px 0 20px;}
+    
+/* ****************** skill ****************** */
+
+#skill {padding-top: 40px;}
+.container {margin-top: 49px;}
+
+
+}
+
+
+
+
+
+
+
+
+
+

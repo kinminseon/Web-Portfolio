@@ -1,0 +1,241 @@
+/* main style.css */
+
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+@font-face {
+ font-family: 'NanumSquare';
+ font-weight: 300;
+ src: url(../../fonts/NanumSquareL.eot);
+ src: url(../../fonts/NanumSquareL.eot?#iefix) format('embedded-opentype'),
+      url(../../fonts/NanumSquareL.woff) format('woff'),
+      url(../../fonts/NanumSquareL.ttf) format('truetype');
+}
+@font-face {
+ font-family: 'NanumSquare';
+ font-weight: 400;
+ src: url(../../fonts/NanumSquareR.eot);
+ src: url(../../fonts/NanumSquareR.eot?#iefix) format('embedded-opentype'),
+      url(../../fonts/NanumSquareR.woff) format('woff'),
+      url(../../fonts/NanumSquareR.ttf) format('truetype');
+}
+@font-face {
+ font-family: 'NanumSquare';
+ font-weight: 700;
+ src: url(../../fonts/NanumSquareB.eot);
+ src: url(../../fonts/NanumSquareB.eot?#iefix) format('embedded-opentype'),
+      url(../../fonts/NanumSquareB.woff) format('woff'),
+      url(../../fonts/NanumSquareB.ttf) format('truetype');
+}
+@font-face {
+ font-family: 'NanumSquare';
+ font-weight: 800;
+ src: url(../../fonts/NanumSquareEB.eot);
+ src: url(../../fonts/NanumSquareEB.eot?#iefix) format('embedded-opentype'),
+      url(../../fonts/NanumSquareEB.woff) format('woff'),
+      url(../../fonts/NanumSquareEB.ttf) format('truetype');
+}
+
+/* ***************** 키프레임 ****************** */
+
+@keyframes reveal_up {
+	0% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes reveal_down {
+	0% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes loading {
+	0%,100% {
+		transform: scaleX(0);
+	}
+	40%,60% {
+		transform: scaleX(1);
+	}
+}
+
+html,body{width: 100%; height: 100%;}
+body{padding: 50px; box-sizing: border-box; background-color: #333;}
+
+/* *********************** header *********************** */
+
+header {width: auto; height: 100%; position: fixed; top: 0; right: 0; z-index: 200;}
+
+#nav_btn {width: 40px; height: 25px; position: fixed; top: 75px; right: 75px; transform: rotate(0deg); transition: 0.5s ease-in-out; cursor: pointer;}
+#nav_btn span {display: block; position: absolute; height: 1px; width: 100%; background: #333; opacity: 1; left: 0; transform: rotate(0deg); transition: 0.25s ease-in-out;}
+
+#nav_btn span:nth-child(2){top: 0px;}
+#nav_btn span:nth-child(3){top: 11px;}
+#nav_btn span:nth-child(4){top: 22px;}
+
+#nav_btn.on span:nth-child(2) {top: 13px; transform: rotate(-45deg);}
+#nav_btn.on span:nth-child(3) {opacity: 0;}
+#nav_btn.on span:nth-child(4) {top: 13px; transform: rotate(-135deg);}
+
+#nav_box {width: 400px; height: 100%; position: fixed; top: 0; right: -400px; transition: 0.5s ease-in-out; background-color: #fff;}
+
+#nav_box ul {width: 100%; height: auto; margin-top: 40px;}
+#nav_box li {width: 100%; height: 100px;}
+#nav_box a {width: 100%; height: 100%; display: block; transition: 0.3s ease-in-out; font-size: 15pt; font-weight: 100; text-align: center; line-height: 100px; font-weight: 300; color: #333;}
+#nav_box a:hover{background-color: #ffc63e;}
+
+.nav_back{transition: 0.5s ease-in-out;}
+
+#nav_btn.on{right: 450px;}
+#nav_box.on {right: 0px;}
+#nav_btn span.on{background-color: #fff;}
+.nav_back.on {width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 150; background-color: rgba(0, 0, 0, 0.7);}
+
+/* *********************** #line *********************** */
+
+#line div{width:200px; height: 1px; position:absolute; z-index:50; background-color:#999;}
+#line .top_line{top: 0; left: 0; transform: rotate(27deg); transform-origin: top left;}
+#line .bottom_line{bottom: 0; right: 0; z-index:50; transform: rotate(27deg); transform-origin: bottom right;}
+
+/* ***************** screen 글씨 ****************** */
+
+#screen {width:100%; height:100%; position:relative; background-color: #fff; overflow:hidden; box-shadow:10px 10px 15px rgba(0, 0, 0, 1) ;}
+#screen .logo_img {width:100%; height: 110px; margin: -140px auto 0; position:absolute; background-image: url(../img/logo.png); background-repeat: no-repeat; background-position: center; background-size:contain; opacity: 0;  top:50%; transform:none;
+animation-name: reveal_up; 
+animation-duration: 0.5s; /* 0.5초동안 진행 */ 
+animation-delay: 0.7s; /* 0.7초 후 시작 */ 
+animation-fill-mode: forwards; /*애니메이션 끝나고 현재 상태 유지*/
+}
+
+#screen .text{width:100%; margin-top:15px; position:absolute; text-align:center; color:#333; top:50%; opacity: 0; overflow:hidden; letter-spacing: 7px; transform:none;
+	animation-name: reveal_down;
+	animation-duration: 0.5s; /* 0.5초동안 진행 */
+	animation-delay: 0.7s; /* 0.7초 후 시작 */
+	animation-fill-mode: forwards; /*애니메이션 끝나고 현재 상태 유지*/
+}
+#screen span{display:block;}
+#screen .text01{font-family: 'NanumSquare', sans-serif; font-size:20px; font-weight:200; color:#666;}
+#screen .border{position: absolute;width:84%; height: 2px; background:#333; top:50%; left:8%; opacity:1;
+	animation: loading 1s 0.3s both;
+}
+.abr{margin-bottom:20px; font-size:60px; font-family: 'Abril Fatface', cursive;}
+
+/* 
+====================================================================
+   1020pxpx - 768px
+====================================================================
+*/
+
+@media screen and (min-width: 768px) and (max-width: 1020px){
+
+	/* ***************** screen 글씨 ****************** */
+	#screen .logo_img {height: 90px; margin: -120px auto 0;}
+	#screen .text{margin-top:7px}
+	#screen .text01{font-size:16px; font-weight:200; color:#666;}
+	.abr{font-size:50px;}
+}
+
+/* 
+====================================================================
+   767px - 480px
+====================================================================
+*/
+
+@media screen and (min-width: 480px) and (max-width: 767px){
+
+    body{padding: 30px;}
+
+    /* *********************** header *********************** */
+
+    #nav_btn {width: 40px; height: 100%; top: 48px; right: 48px;}
+
+    #nav_btn span:nth-child(2){top: 0px;}
+    #nav_btn span:nth-child(3){top: 11px;}
+    #nav_btn span:nth-child(4){top: 22px;}
+
+    #nav_btn.on span:nth-child(2) {top: 13px;}
+    #nav_btn.on span:nth-child(3) {opacity: 0;}
+    #nav_btn.on span:nth-child(4) {top: 13px;}
+
+    #nav_box {width: 300px; right: -300px;}
+
+    #nav_box ul {margin-top: 40px;}
+    #nav_box li {height: 80px;}
+    #nav_box a{ line-height: 80px; }
+
+    #nav_btn.on{right: 350px;}
+
+
+    /* *********************** #line *********************** */
+
+    #line div{width:100px;}
+    #line .top_line{transform: rotate(37deg);}
+    #line .bottom_line{transform: rotate(37deg);}
+
+   /* ***************** screen 글씨 ****************** */
+	#screen .logo_img {height: 90px; margin: -130px auto 0;}
+	#screen .text{margin-top:0px;}
+	#screen .text01{font-size:14px; font-weight:200; color:#666;}
+	.abr{font-size:40px; margin-bottom: 12px;}
+ 
+}
+
+/* 
+====================================================================
+   479px - 360px
+====================================================================
+*/
+
+@media screen and (max-width: 479px){
+ 
+	body{padding: 0px;}
+
+    /* *********************** header *********************** */
+
+    #nav_btn {width: 30px; height: 100%; top: 30px; right: 30px;}
+
+    #nav_btn span:nth-child(2){top: 0px;}
+    #nav_btn span:nth-child(3){top: 11px;}
+    #nav_btn span:nth-child(4){top: 22px;}
+
+    #nav_btn.on span:nth-child(2) {top: 13px;}
+    #nav_btn.on span:nth-child(3) {opacity: 0;}
+    #nav_btn.on span:nth-child(4) {top: 13px;}
+
+    #nav_box {width: 200px; right: -200px;}
+
+    #nav_box ul {margin-top: 20px;}
+    #nav_box li {height: 60px;}
+    #nav_box a{font-size: 12pt; font-weight: 300; text-align: center; line-height: 60px; color: #333;}
+
+    #nav_btn.on{right: 230px;}
+	
+    /* *********************** #line *********************** */
+
+    #line div{width:100px;}
+    #line .top_line{transform: rotate(37deg);}
+    #line .bottom_line{transform: rotate(37deg);}
+
+   /* ***************** screen 글씨 ****************** */
+	#screen .logo_img {height: 85px; margin: -130px auto 0;}
+	#screen .text{margin-top:0px;}
+	#screen .text01{font-size:12px; font-weight:200; color:#666;}
+	.abr{font-size:35px; margin-bottom: 8px;}
+    
+}
+
+
+
+
+
+
+
