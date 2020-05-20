@@ -1,0 +1,91 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="Generator" content="Notepad++"/>
+	<meta name="Author" content="박미선, 이송이, 김민선"/>
+	<meta name="Keywords" content="포트폴리오, 모바일, 제이쿼리, portfolid, mobile, jQuery, team project, 아이씨유, ISeeU, app"/>
+	<meta name="Description" content="ISeeU 앱에 오신 것을 환영합니다."/>	
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>ISeeU 앱에 오신 것을 환영합니다.</title>
+	
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="http://www.hschool.co.kr/js/html5shiv.js"></script>
+	<script src="http://www.hschool.co.kr/js/html5div.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="js/iscroll.js"></script>
+	<script src="js/load_default.js"></script>
+	<script src="js/load_ios.js"></script>
+	<script>
+	jQuery(document).ready(function(){
+			
+		var clicked = sessionStorage.getItem('clicked');
+		if(clicked){
+			$('#onboarding').remove();
+			}
+		$('#onboarding').click(function(){
+			$('#onboarding').stop(true,true).animate({'margin-top':'0px'},500, 
+				function(){
+					$('#onboarding').remove();
+				});
+			sessionStorage.setItem('clicked', true );
+		});
+	});
+	</script>
+	
+<!-- 	<link rel="shortcut icon" href="app_icon.png">
+	<link rel="apple-touch-icon-precomposed" href="start/app_icon.png" />
+	<link rel="apple-touch-startup-image" href="start/startup.gif"/> -->
+</head>
+<body>
+	<div data-role="page" id="login" data-position="fixed" data-title="로그인">
+		
+		<div data-role="content" id="login_box">
+			<div id="header_img">
+				<img src="images/login_logo.png" height="120px" alt="" />
+			</div>
+			<div id="id_text">
+				<label for="name" class="type type1">아 이 디</label>
+				<input type="text" name="name" id="name" />
+			</div>
+			<div id="pw_text">
+				<label for="password" class="type type1">비 밀 번 호</label>
+				<input type="password" name="password" id="password" />
+			</div>
+			<div id="IdPw">
+				<input type="checkbox" name="type1" id="type1" checked="checked" />
+				<label for="type1" class="type1">아이디 저장</label>
+				<input type="checkbox" name="type2" id="type2" />
+				<label for="type2" class="type1">비밀번호 저장</label>
+			</div>
+			<div class="ui-grid-a join">
+				<div class="ui-blcok-a"><a href="mypage.html" data-role="button" data-rel="close">로그인</a></div>
+			</div>
+			<div id="find">
+				<ul>
+					<li><a href="#">아이디 찾기 &nbsp; |</a></li>
+					<li><a href="#">비밀번호 찾기</a></li>
+				</ul>
+			</div>
+			<div class="ui-grid-a join">
+				<div class="ui-blcok-a"><a href="#" data-role="button" data-rel="close">회원가입</a></div>
+				<div class="ui-blcok-b"><a href="#" data-role="button" data-rel="close">SNS 간편회원가입</a></div>
+			</div>
+		</div>
+	</div>
+	<!-- 액션 시트(action sheets)
+	헤더와 푸터터가 없는 특별한 대화상자	-->
+	<!-- <div id="onboarding">
+		<img src="images/onboarding.gif"  width="100%" height="auto" alt="온보딩" />
+		
+		<div class="onboarding_close">
+			
+		</div>
+	</div> -->
+	<!-- <p>화면을 누르시면 온보딩 페이지가 닫혀요!</p> -->
+</body>
+</html>

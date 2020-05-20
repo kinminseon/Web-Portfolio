@@ -1,0 +1,145 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="Generator" content="Notepad++"/>
+	<meta name="Author" content="박미선, 이송이, 김민선"/>
+	<meta name="Keywords" content="포트폴리오, 모바일, 제이쿼리, portfolid, mobile, jQuery, team project, 아이씨유, ISeeU, app"/>
+	<meta name="Description" content="ISeeU 앱에 오신 것을 환영합니다."/>	
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>ISeeU 공지사항</title>
+	
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/jquery.lightbox-0.5.js"></script>
+</head>
+<body>
+	<div data-role="page" id="diary" data-position="fixed" data-title="알림장">
+		<div data-role="header" data-enhance="false">
+			<a href="mypage.html" id="back" class="ui-btn-back"><img src="images/back.png" height="100%" alt="뒤로가기" /></a>
+			<h1>알림장</h1>
+		</div>
+		<div data-role="content">
+			<div data-role="fieldcontain">
+				<select>
+					<option>전체보기</option>
+					<!-- <option value="num0" data-placeholder="true">선택하세요</option> -->
+					<!-- <option value=""></option> -->
+					<option value="num1">1개월</option>
+					<option value="num2">2개월</option>
+					<option value="num3">1년</option>
+				</select>
+			</div>
+			<div class="diary_list">
+				<div class="tit_day"><span>2018년 06월</span></div>
+				<div class="row_box">
+					<div class="row">
+						<div class="day_box">
+							<p class="num">15</p>
+							<p class="day">금요일</p>
+						</div>
+						<div class="txt">
+							<p class="tit">달님반 박보검</p>
+							<p class="inner">
+								안녕하세요?<br />
+								이번주에는 감각발달 수업과 오후시간에 낮잠을 재우고 야외에 나가서 수업을 했습니다.					
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="row_box">
+					<div class="row">
+						<div class="day_box">
+							<p class="num">07</p>
+							<p class="day">목요일</p>
+						</div>
+						<div class="txt">
+							<p class="tit">달님반 박보검</p>
+							<p class="inner">
+								안녕하세요?<br />
+								어제 보검이가 신나게 놀고 친구들하고 같이 잘 지내고 있습니다.	
+							</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="tit_day"><span>2018년 05월</span></div>
+				<div class="row_box">
+					<div class="row">
+						<div class="day_box">
+							<p class="num">21</p>
+							<p class="day">월요일</p>
+						</div>
+						<div class="txt">
+							<p class="tit">달님반 박보검</p>
+							<p class="inner">
+								안녕하세요?<br />
+								이번주에는 감각발달 수업과 오후시간에 낮잠을 재우고 야외에 나가서 수업을 했습니다.					
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="row_box">
+					<div class="row">
+						<div class="day_box">
+							<p class="num">17</p>
+							<p class="day">목요일</p>
+						</div>
+						<div class="txt">
+							<p class="tit">달님반 박보검</p>
+							<p class="inner">
+								안녕하세요?<br />
+								이번주에는 감각발달 수업과 오후시간에 낮잠을 재우고 야외에 나가서 수업을 했습니다.					
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="row_box">
+					<div class="row">
+						<div class="day_box">
+							<p class="num">08</p>
+							<p class="day">화요일</p>
+						</div>
+						<div class="txt">
+							<p class="tit">달님반 박보검</p>
+							<p class="inner">
+								안녕하세요?<br />
+								이번주에는 감각발달 수업과 오후시간에 낮잠을 재우고 야외에 나가서 수업을 했습니다.					
+							</p>
+						</div>
+					</div>
+				</div>
+			
+				<div class="tit_day"><span>2018년 04월</span></div>
+				<div class="row_box">
+					<div class="row">
+						<div class="day_box">
+							<p class="num">15</p>
+							<p class="day">수요일</p>
+						</div>
+						<div class="txt">
+							<p class="tit">달님반 박보검</p>
+							<p class="inner">
+								안녕하세요?<br />
+								이번주에는 감각발달 수업과 오후시간에 낮잠을 재우고 야외에 나가서 수업을 했습니다.					
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed"  data-fullscreen="true" data-theme="a" class="footer">
+			<ul class="main_menu bold" data-enhance="false">
+				<li><a href="mypage.html" data-ajax="false" title="home"><img src="images/home_icon.png" height="24px" alt="" /><span class="hidden">홈</span></a></li>
+				<li><a href="alarm.html" data-rel="dialog" title="alarm" data-transition="slideup"><img src="images/jong_icon.png" height="24px" alt="" /><span class="hidden">알림</span></a></li>
+				<li><a href="mypage.html" data-ajax="false" title="mypage"><img src="images/mypage_icon.png" height="24px" alt="" /><span class="hidden">마이페이지</span></a></li>
+				<li><a href="talk.html" data-ajax="false" title="chatbot"><img src="images/chat_icon.png" height="24px" alt="" /><span class="hidden">챗봇</span></a></li>
+			</ul>
+		</div>
+	</div>
+	
+</body>
+</html>

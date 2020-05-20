@@ -1,0 +1,88 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="Generator" content="Notepad++"/>
+	<meta name="Author" content="박미선, 이송이, 김민선"/>
+	<meta name="Keywords" content="포트폴리오, 모바일, 제이쿼리, portfolid, mobile, jQuery, team project, 아이씨유, ISeeU, app"/>
+	<meta name="Description" content="ISeeU 앱에 오신 것을 환영합니다."/>	
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+	<meta name="apple-mobile-web-app-capable" content="yes" /> 
+	<title>ISeeU 앱에 오신 것을 환영합니다.</title>
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="css/talk.css" />
+	<link rel="stylesheet" href="css/conversation.css" />
+	
+	<!-- jQuery -->
+	<script src="js/load_default.js"></script>
+	<script src="js/load_ios.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<!-- <script src="js/jquery-1.9.1.min.js"></script> -->
+	<script src="js/flicking.js"></script>
+	<script src="js/iscroll.js"></script>
+	<script src="js/html5div.js"></script>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/jquery-1.9.1.min.js"></script>
+
+
+	<script src="js/jquery-1.12.2.min.js"></script>
+	<script src="js/conversation.js"></script>
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+   <script>
+		// <![CDATA[
+		try {
+			window.addEventListener('load', function() {
+				setTimeout(scrollTo, 0, 0, 1); 
+			}, false);
+		} catch(e) {}
+		// ]]>
+	 </script>
+	
+</head>
+<body>
+	<div data-role="page" id="chatbot" data-position="fixed" data-title="채팅">
+		<header>
+			<div id="wrap_header">
+				<h1 class="dispN">iseeU 앱</h1>
+				<h2>iseeU</h2>	
+			</div><!-- id="wrap_header" -->
+		</header>
+		
+		<section>
+			<div id="container">
+				<div class="containerInner">
+					<div id="title">박보검 어머니께서 보내신 메세지가 도착하였습니다.</div>
+
+						<div class="chat">
+						  <div class="messages">
+							<div class="messages-content"></div>
+						  </div>
+
+						</div>
+						<div class="message-box">
+							<textarea type="text" class="message-input" placeholder="내용을 입력하세요"></textarea>
+							<button type="submit" name="btn1" value="전송" class="message-submit">전송</button>
+						</div>
+						<div class="bg"></div>
+
+
+				
+				</div> 
+			</div><!-- id="container" -->
+		</section>
+		<div class="footer">
+			<ul class="foot_menu bold">
+				<li><a href="mypage.html" title="home"><img src="images/home_icon.png" height="24px" alt="" /><span class="hidden">홈</span></a></li>
+				<li><a href="alarm.html"  data-rel="dialog" title="alarm" data-transition="slideup"><img src="images/jong_icon.png" height="24px" alt="" /><span class="hidden">알림</span></a></li>
+				<li><a href="mypage.html" title="mypage"><img src="images/mypage_icon.png" height="24px" alt="" /><span class="hidden">마이페이지</span></a></li>
+				<li><a href="#" title="chatbot"><img src="images/chat_icon.png" height="24px" alt="" /><span class="hidden">챗봇</span></a></li>
+			</ul>
+		</div>
+		
+	</div>
+</body>
+</html>

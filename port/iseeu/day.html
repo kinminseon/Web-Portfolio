@@ -1,0 +1,100 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="Generator" content="Notepad++"/>
+	<meta name="Author" content="박미선, 이송이, 김민선"/>
+	<meta name="Keywords" content="포트폴리오, 모바일, 제이쿼리, portfolid, mobile, jQuery, team project, 아이씨유, ISeeU, app"/>
+	<meta name="Description" content="ISeeU 앱에 오신 것을 환영합니다."/>	
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>ISeeU 앱에 오신 것을 환영합니다.</title>
+	
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<!-- <link rel="stylesheet" href="css/day.css" /> -->
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="http://www.hschool.co.kr/js/html5shiv.js"></script>
+	<script src="http://www.hschool.co.kr/js/html5div.js"></script>
+	<script src="js/flicking.js"></script>
+	<script src="js/iscroll.js"></script>
+</head>
+<body>
+	<div data-role="page" id="day" data-position="fixed" data-title="일정">
+		<div data-role="header" data-enhance="false">
+			<a href="mypage.html" id="back" class="ui-btn-back"><img src="images/back.png" height="100%" alt="뒤로가기" /></a>
+			<h1>일정</h1>
+			<a href="#dialog1" data-rel="dialog" data-transition="slideup" class="add">추가</a>
+		</div>
+		<div id="container">
+			<div class="date"></div>
+			<div class="calendar">
+				<div id="flicking_wrapper">
+					<div id="flicking_wrapScroll">
+						<ul>
+							<li><div></div></li><!-- 3 -->
+							<li><div></div></li><!-- 4 -->
+							<li><div></div></li><!-- 5 -->
+							<li><div></div></li><!-- 6 -->
+							<li><div></div></li><!-- 7 -->
+							<li><div></div></li><!-- 8 -->
+							<li><div></div></li><!-- 9 -->
+							<li><div></div></li><!-- 10 -->
+							<li><div></div></li><!-- 11 -->
+							<li><div></div></li><!-- 12 -->
+							<li><div></div></li><!-- 1 -->
+							<li><div></div></li><!-- 2 -->
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="day_list list1">
+				<div class="day_list_box">
+					<div class="tit_text_box">
+						<p class="tit_day bold">NEW</p>
+						<p class="tit_num bold">12</p>
+					</div>
+					<div class="detail_text">
+						<p class="clock namun bold">어린이 소풍 가는 날</p>
+						<p class="de_text namun bold">2018.06.12</p>
+						<p class="de_content">신나라 어린이집 서울대공원 가는 날</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="day_list list2">
+				<div class="day_list_box">
+					<div class="tit_text_box">
+						<p class="tit_day bold">일정</p>
+						<p class="tit_num bold">08</p>
+					</div>
+					<div class="detail_text">
+						<p class="clock namun bold">부모님 체험학습 날</p>
+						<p class="de_text namun bold">2018.06.08</p>
+						<p class="de_content">신나라 어린이집 9시까지</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed"  data-fullscreen="true" data-theme="a" class="footer">
+			<ul class="main_menu bold" data-enhance="false">
+				<li><a href="mypage.html" data-ajax="false" title="home"><img src="images/home_icon.png" height="24px" alt="" /><span class="hidden">홈</span></a></li>
+				<li><a href="alarm.html" data-rel="dialog" title="alarm" data-transition="slideup"><img src="images/jong_icon.png" height="24px" alt="" /><span class="hidden">알림</span></a></li>
+				<li><a href="mypage.html" data-ajax="false" title="mypage"><img src="images/mypage_icon.png" height="24px" alt="" /><span class="hidden">마이페이지</span></a></li>
+				<li><a href="talk.html" data-ajax="false" title="chatbot"><img src="images/chat_icon.png" height="24px" alt="" /><span class="hidden">챗봇</span></a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 액션 시트(action sheets)
+	헤더와 푸터터가 없는 특별한 대화상자	-->
+	<div data-role="dialog" id="dialog1">
+		<div data-role="content">
+			<h3>일정 추가하기</h3><br />
+			<a href="#" data-role="button" data-rel="back">닫기</a>
+		</div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+a,span,p,h1,h2,h3,h4,h5,h6,em{ font-family:'Noto Sans KR','¸¼Àº °íµñ','µ¸¿ò',Dotum, sans-serif;}
+
+/* font-family: 'Noto Sans KR', sans-serif; */
+/* *********** ¼­ºê °Ë»ö¹Ù ºÎºÐ ************/
+#content .intro{width:870px; padding-left:100px; height:700px; background:url(../images/about.png) no-repeat top right;}
+.intro_header>strong{display:block; width:1070px; font-size:20px; font-weight:500; font-family: 'Noto Sans KR', sans-serif; color:#888888; padding-bottom:15px;}
+.intro_header>h3{width:870px; font-size:32px; font-family: 'Noto Sans KR', sans-serif; color:#004176; padding-bottom:40px;}
+.intro_header>h3:after{content:''; display:block; width:100px; height:2px; background-color:#004176; margin:40px 0 50px;}
+
+.intro_txt p{width:870px; font-family: 'Noto Sans KR', sans-serif; color:#555555; font-size:17px; text-align:justify;}
+.intro_txt p:first-child{width:480px; margin-bottom:50px;}
+.intro_txt p.txt02{margin-bottom:50px;}
+.intro_txt p.thank{ font-family: 'Noto Sans KR', sans-serif; color:#333333; font-size:25px; font-weight:500;}
+
+

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+a,span,p,h1,h2,h3,h4,h5,h6,em{ font-family:'Noto Sans KR','¸¼Àº °íµñ','µ¸¿ò',Dotum, sans-serif;}
+
+/* font-family: 'Noto Sans KR', sans-serif; */
+/* *********** ¼­ºê °Ë»ö¹Ù ºÎºÐ ************/
+#content>div{width:1010px; padding:30px; margin-bottom:20px;}
+#content h3{font-size:22px; font-family: 'Noto Sans KR', sans-serif; color:#004176; margin-bottom:10px;}
+#content h3+span{font-size:15px; font-family: 'Noto Sans KR', sans-serif; color:#666666;}
+#content>div>ul{border-top:2px solid #dddddd; margin-top:20px;}
+#content>.mission>ul>li{height:120px; border-bottom:1px solid #dddddd;}
+.mission .tlt{height:90px; width:300px; padding:15px 0; background-color:#004176; vertical-align:middle; text-align:center; float:left;}
+.tlt p{padding-top:15px; font-size:20px; font-family: 'Noto Sans KR', sans-serif; color:#ffffff; font-weight:400;}
+#content>.mission>ul>li ul{width:680px; height:90px; float:left; padding:15px 0 15px 20px;}
+#content>.mission>ul>li li{width:670px;height:30px; line-height:30px; font-family: 'Noto Sans KR', sans-serif; color:#555555; font-weight:300;}
+#content>.mission>ul>li li span{height:30px; color:#5c9dd1; font-size:12px; line-height:30px;}
+
+#content>.vision li{height:70px; border-bottom:1px solid #dddddd; text-align:center;}
+#content>.vision span{display:block; width:300px; height:70px; line-height:70px; float:left; background-color:#004176; font-size:20px; font-family: 'Noto Sans KR', sans-serif; color:#ffffff; font-weight:400;}
+#content>.vision p{width:380px; padding-left:30px; text-align:left; height:70px; line-height:70px; float:left; font-family: 'Noto Sans KR', sans-serif; color:#555555; font-weight:300;}

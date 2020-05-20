@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+*{margin:0; padding:0; -webkit-text-size-adjust:none; }
+html{width:100%; height:640px; overflow-x:hidden; overflow-y:scroll;}
+body{color:#666666; font-size:14px; font-family: '맑은 고딕', Noto-sans, Apple-Gothic, sans-serif; width:100%; height:640px; margin:0 auto;}
+img, fieldset{border:0;}
+ul, ol, li, dl{list-style:none;}
+h1, h2, h3, h4, h5, h6{font-size:100%; font-weight:normal;}
+hr{display:none;}
+a{color:inherit;}
+a{color:#333333; text-decoration:none;}/* a:link */
+/* a:visited{color:#333333;}
+a:hover, a:active{color:#333333; text-decoration:none;} */
+em, i, address{font-style: normal; font-weight:normal;}
+legend, caption{display:none; clear:both;}
+input, textarea, select, button, table{font-size:inherit; font-family: inherit; line-height: inherit; font-family: '맑은 고딕', Noto-sans, Apple-Gothic, sans-serif;}
+section, nav, article, aside, hgroup, header, footer{display:block;} 
+textarea, input{background: url(none); -webkit-border-radius:1px; -webkit-appearance: none ;}
+textarea{resize:none;}
+label{cursor:pointer;}
+.nanum{font-family: '맑은 고딕', Noto-sans, Apple-Gothic, sans-serif;}
+.bold{font-weight:bold;}
+.dispN{display:none;}
+.fl{float:left;}
+.fr{float:right;}
+.cb{clear:both;}
+.cf:after{content:''; display:block; clear:both;}
+
+.guide{color: #666666;}
+
+
