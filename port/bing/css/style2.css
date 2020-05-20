@@ -1,0 +1,44 @@
+@charset "utf-8";
+@font-face {
+    font-family:'binggrae';
+    src:url('../font/Binggrae-Bold.eot');
+    src:url('../font/Binggrae-Bold.eot')format('eot?') format('eot');
+    src:url('../font/Binggrae-Bold.woff')format('woff');
+    src:url('※'),url('../font/Binggrae-Bold.otf')format('opentype');
+    src:url('※'),url('../font/Binggrae-Bold.ttf')format('truetype');
+}
+
+/* 배경동영상 */
+.vid { width:100%; height:100%; position:fixed; top:-60px; left:0px; /* opacity:0.9; */ }
+.vid video { width:100%; min-width:1200px; }
+
+
+
+
+/* 2depth 다른 부분 35, 36*/
+#gnb ul{position:absolute; left:0px; top:0px; transition:all 0.4s;}
+/* #gnb>li:hover ul{left:205px;} */
+#gnb ul a{display:block; width:180px; height:34px; color:#ffffff; font-size:15px; font-family:'binggrae',sans-serif ;background:url(../img/list_bg1.png) no-repeat;  margin-bottom:8px; text-align:center; line-height:34px;}
+#gnb ul a:hover{color:#333;}
+
+
+
+/* sns 버튼 모음*/
+#sns{position:fixed; top:40px; left:50%; margin-left:-125px;}
+#sns li{float:left; margin-right:30px;}
+#sns .fa{font-size:25px; color:#ffffff; transform:scale(1); transition:all 0.5s; opacity:0.8;}
+#sns .fa:hover{opacity:1; transform:scale(1.4)}
+
+/* 이벤트 레이아웃 */
+#event{width:248px; height:253px; position:fixed; right:80px; top:80px;}
+
+/* contents 레이아웃 */
+#side{width:830px; height:270px; position:fixed; right:0px; top:430px;}
+#side:hover{right:1px; opacity:1;}
+/* #side:hover .con {left:0%;}  */
+
+/* 자동롤링 버튼*/
+#side .btnContents{width:100%; height:270px; position:absolute; left:450px;}
+#side .btnContents a{position:absolute; left:830px; margin-top:70px;}
+
+
