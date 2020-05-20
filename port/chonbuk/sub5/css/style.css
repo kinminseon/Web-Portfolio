@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+a,span,p,h1,h2,h3,h4,h5,h6,em{ font-family:'Noto Sans KR','¸¼Àº °íµñ','µ¸¿ò',Dotum, sans-serif;}
+
+/* font-family: 'Noto Sans KR', sans-serif; */
+/* ****** Áú¹® ¸®½ºÆ® ****** */
+
+#faqList{font-size:15px; border-top:2px solid #333333;}
+#faqList .thRow{width:1070px; height:50px; border-bottom:1px solid #dddddd;}
+#faqList .row{width:1070px; height:50px; color:#333333; border-bottom:1px solid #eaeaea;}
+#faqList .title {color:#333333; text-align:center; font-family: 'Noto Sans KR', sans-serif; line-height:50px; font-weight:bold;}
+#faqList .cell{font-size:13px; height:50px; text-align:center; font-family: 'Noto Sans KR', sans-serif; line-height:50px; float:left;}
+#faqList .cell1{width:70px;}
+#faqList .cell2{width:610px;}
+#faqList .cell3{width:100px;}
+#faqList .cell4{width:190px;}
+#faqList .cell5{width:80px;}
+#faqList .row{display:block; border-bottom:1px solid #efefef;}
+#faqList .row .cell2{width:590px; padding-left:20px;}
+#faqList .row .cell2 {text-align:left; cursor:pointer;}
+#faqList .cell3{width:120px;}
+
+#faqList .checkbox_txt{padding:20px 25px 30px 90px; background-color:#eaeaea; text-align:justify; overflow:hidden;  font-family: 'Noto Sans KR', sans-serif;
+}
+.new{ margin-left:30px; font-size:10px; font-family: 'Noto Sans KR', sans-serif; color:#cc3333;}
+/* #faqList .checkbox_txt{display:none;} */
+.closed{display:none;}
+
+
+/* ****** list ¹øÈ£ ****** */
+
+#list{width:1070px; height:50px; margin-top:20px;}
+#list ul{width:350px; height:50px; margin:0 auto;}
+#list ul li{width:50px; height:50px;}
+#list ul li a{display:block; width:50px; height:50px; text-align:center; font-family: 'Noto Sans KR', sans-serif; line-height:50px;}
+#list ul li:hover{background:#eeeeee;}
+
+
+
+
+
+
+
+
+

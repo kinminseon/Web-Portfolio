@@ -1,0 +1,431 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="../images/fav.png">
+	<link rel="apple-touch-icon-precomposed" href="../images/fav.png">
+	<link rel="apple-touch-icon-precomposed" size="114x114" href="../images/fav.png">
+	<title>메인레이아웃</title>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+	<script src="http://www.hschool.co.kr/js/html5shiv.js"></script>
+	<script src="http://www.hschool.co.kr/js/html5div.js"></script>	
+	<link rel="stylesheet" href="../css/layout.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="js/script.js"></script>
+	<script>
+		function unit(x){ // 1의 자리 숫자
+			var m = x%10
+			return m
+		}
+		function tenth(y){ // 10의 자리 숫자
+			var m = y/10%10
+			m = Math.floor(m)
+			return m
+		}
+		function hund(v){ // 100의 자리 숫자
+			var m = v/100
+			m = Math.floor(m)
+			return m
+		}
+		function ddaycount(){
+			imgArr = [
+				'../images/num0.jpg',
+				'../images/num1.jpg',
+				'../images/num2.jpg',
+				'../images/num3.jpg',
+				'../images/num4.jpg',
+				'../images/num5.jpg',
+				'../images/num6.jpg',
+				'../images/num7.jpg',
+				'../images/num8.jpg',
+				'../images/num9.jpg'
+			]
+			doomsday = new Date('July 17,2018 00:00:00') // 여기서 D-Day를 바꾸세요.
+			// Janu Febr Marc Apri May June July Augu Sept Octo Nove Dece
+			today = new Date()
+			howfar = doomsday - today;
+			if(howfar>0){
+				end = setInterval('ddaycount()',1000)
+			}else{
+				clearInterval('end')
+				document.getElementById('countment').innerHTML = '예약일 날짜가 지났습니다.'
+				return false
+			}
+			days = Math.floor(howfar/(1000*60*60*24))
+			hours = Math.floor(howfar/(1000*60*60))
+			mins = Math.floor(howfar/(1000*60))
+			secs = Math.floor(howfar/(1000))
+			
+			d = days;
+			h = hours - days*24
+			m = mins - hours*60
+			s = secs - mins*60
+			
+			document.getElementById('day100').setAttribute('src',imgArr[hund(d)])
+			document.getElementById('day10').setAttribute('src',imgArr[tenth(d)])
+			document.getElementById('day1').setAttribute('src',imgArr[unit(d)])
+			
+			if(d<10){d='00'+d}else if(d<100){d='0'+d}
+			
+			document.getElementById('hour10').setAttribute('src',imgArr[tenth(h)])
+			document.getElementById('hour1').setAttribute('src',imgArr[unit(h)])
+			
+			if(h<10){h='0'+h}
+			
+			document.getElementById('min10').setAttribute('src',imgArr[tenth(m)])
+			document.getElementById('min1').setAttribute('src',imgArr[unit(m)])
+			
+			if(m<10){m='0'+m}
+			
+			document.getElementById('sec10').setAttribute('src',imgArr[tenth(s)])
+			document.getElementById('sec1').setAttribute('src',imgArr[unit(s)])
+			
+			if(s<10){s='0'+s}
+		}
+	</script>
+</head>
+<body onLoad="ddaycount()">
+	<div id="wrap">
+		<div id="header" class="cf">
+			<div id="main_gnb_box">
+				<div id="main_gnb" class="cf">
+					<div id="main_gnb1" class="fl">
+						<ul class="cf">
+							<li class="fl"><a href="../index.html">HOME</a></li>
+							<li class="fl"><a href="#">즐겨찾기</a></li>
+							<li class="fl">대표전화 1577-7877</li>
+							<li class="fl r_last">응급센터 250-2222</li>
+						</ul>
+					</div>
+					<div id="main_gnb2" class="fr">
+						<ul class="cf">
+							<li class="fl"><a href="../sub2/index.html">로그인</a></li>
+							<li class="fl"><a href="../sub2/index.html">회원가입</a></li>
+							<li class="fl"><a href="../sub2/index.html">사이트맵</a></li>
+							<li class="fl last"><a href="#">Languages</a></li>
+						</ul>
+					</div>
+				</div>
+			</div><!-- id="main_gnb_box" -->
+			<div id="main_lnb">
+				<div id="main_lnb_box" class="cf">
+					<h1 class="fl">
+						<a href="../index.html"><img src="../images/logo.jpg" alt="전북대학교 로고" /><span class="hidden">전북대학교 로고</span></a>
+					</h1>
+					<div id="main_lnb_list" class="fr cf">
+						<ul>
+							<li class="sub1 fl"><a href="index.html">진료안내</a></li>
+							<li class="sub2 fl"><a href="../sub3/index.html">병원소개</a></li>
+							<li class="sub3 fl"><a href="../sub4/index.html">병원이용</a></li>
+							<li class="sub4 fl"><a href="../sub5/index.html">진료예약/조회</a></li>
+							<li class="sub5 fl"><a href="../sub1/index.html">행복Plus정보</a></li>
+							<li class="sub6 fl"><a href="../sub3/index.html">사회공헌</a></li>
+							<li class="sub_box cf">
+								<div class="sub_list_box">
+									<div class="sub_img fl">
+										<img src="../images/lnb_bg_img1.png" alt="" />
+									</div>
+									<div class="sub_list_box1 fr cf">
+										<ul class="menu1 fl">
+											<li><a href="#">진료과/의료진</a></li>
+											<li><a href="#">전문진료분야</a></li>
+											<li><a href="#">전문센터</a></li>
+											<li><a href="#">외래이용절차/접수</a></li>
+											<li><a href="#">입퇴원안내</a></li>
+											<li><a href="#">응급진료안내</a></li>
+											<li><a href="#">통합검사예약</a></li>
+											<li><a href="#">요양급여비용안내</a></li>
+											<li><a href="#">비급여진료비안내</a></li>
+											<li class="b_last"><a href="#">입원생활안내</a></li>
+										</ul>
+										<ul class="menu2 fl">
+											<li><a href="#">병원장 인사말</a></li>
+											<li><a href="#">미션/비전</a></li>
+											<li><a href="#">연혁</a></li>
+											<li><a href="#">역대병원장소개</a></li>
+											<li><a href="#">조직구성도</a></li>
+											<li><a href="#">현황 및 통계</a></li>
+											<li><a href="#">미디어 홍보센터</a></li>
+											<li class="b_last"><a href="#">병원소식</a></li>
+										</ul>
+										<ul class="menu3 fl">
+											<li><a href="#">오시는길</a></li>
+											<li><a href="#">원내배치도</a></li>
+											<li><a href="#">주차안내</a></li>
+											<li><a href="#">편의시설</a></li>
+											<li><a href="#">문병안내</a></li>
+											<li><a href="#">전화번호안내</a></li>
+											<li><a href="#">고객의소리</a></li>
+											<li><a href="#">장례식장안내</a></li>
+											<li class="b_last"><a href="#">진료지원부서</a></li>
+										</ul>
+										<ul class="menu4 fl">
+											<li><a href="#">통합예약센터</a></li>
+											<li><a href="#">통합예약조회</a></li>
+											<li><a href="#">증명서발급</a></li>
+											<li><a href="#">진료기록·의료</a></li>
+											<li><a href="#">영상사본발급</a></li>
+											<li class="b_last"><a href="#">진료협력센터</a></li>
+										</ul>
+										<ul class="menu5 fl">
+											<li><a href="#">건강정보</a></li>
+											<li><a href="#">첨단장비</a></li>
+											<li><a href="#">복약상담</a></li>
+											<li class="b_last"><a href="#">문화Plus정보</a></li>
+										</ul>
+										<ul class="menu6 fl">
+											<li><a href="#">의료봉사</a></li>
+											<li><a href="#">의료사회사업</a></li>
+											<li><a href="#">사회복지후원회</a></li>
+											<li><a href="#">공공의료</a></li>
+											<li class="b_last"><a href="#">자원봉사</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+	</div><!-- id="header" -->
+		<div id="section" class="cf">
+			<div id="section_header">
+				<div class="inner">
+					<h2>진료과/의료진</h2>
+					<p>전북대학교병원 분야별 최고의 의료진을 소개합니다.</p>
+				</div>
+			</div><!-- id="section_header" -->
+			<div id="content_box" class="cf">
+				<div id="aside" class="fl cf">
+					<div class="cf">
+						<h3>진료안내</h3>
+						<ul class="sub_nav cf">
+							<li class="on"><a href="index.html">진료과/의료진</a></li>
+							<li><a href="#">전문진료분야</a></li>
+							<li><a href="#">전문센터</a></li>
+							<li><a href="#">외래이용절차/접수</a></li>
+							<li><a href="#">입퇴원안내</a></li>
+							<li><a href="#">응급진료안내</a></li>
+							<li><a href="#">통합검사예약</a></li>
+							<li><a href="#">요양급여비용안내</a></li>
+							<li><a href="#">비급여진료비안내</a></li>
+							<li class="b_last"><a href="#">입원생활안내</a></li>
+						</ul>
+					</div>
+					<div id="countwrap" class="cf">
+						<h3 id="countment">예약일 D-DAY</h2>
+						<p class="text">고객님의 예약일까지 남은 날짜</p>
+						<div class="counter">
+							<ul class="cf">
+								<li id="countD" class="firstli fl">
+									<img src="../images/num0.jpg" width="20" alt="" id="day100" class="fl" />
+									<img src="../images/num0.jpg" width="20" alt="" id="day10" class="fl" />
+									<img src="../images/num0.jpg" width="20" alt="" id="day1" class="fl" />
+								</li>
+								<li class="fl">
+									<img src="../images/col.jpg" width="5" alt="" id="middle" class="fl" />
+								</li>
+								<li id="counterH" class="fl">
+									<img src="../images/num0.jpg" width="20" alt="시간10의자리" id="hour10" class="fl" />
+									<img src="../images/num0.jpg" width="20" alt="시간1의자리" id="hour1" class="fl" />
+								</li>
+								<li class="fl">
+									<img src="../images/col.jpg" width="5" alt="" id="middle" class="fl" />
+								</li>
+								<li id="counterM" class="fl">
+									<img src="../images/num0.jpg" width="20" alt="분10의자리" id="min10" class="fl" />
+									<img src="../images/num0.jpg" width="20" alt="분1의자리" id="min1" class="fl" />
+								</li>
+								<li class="fl">
+									<img src="../images/col.jpg" width="5" alt="" id="middle" class="fl" />
+								</li>
+								<li id="counterS" class="fl">
+									<img src="../images/num0.jpg" width="20" alt="초10의자리" id="sec10" class="fl" />
+									<img src="../images/num0.jpg" width="20" alt="초1의자리" id="sec1" class="fl" />
+								</li>
+							</ul>
+						</div>
+					</div><!-- id="countwrap" -->
+				</div><!-- id="aside" -->
+				<div id="content" class="fl cf">
+					<div class="srch_box cf">
+						<h3>의료진 검색</h3>
+						<form action="#" method="post" name="search_form" class="cf" id="search_form">
+							<span class="cf">
+								<img src="../images/srch.png" height="24" alt="검색아이콘" />
+								<label for="search">의료진/진료 검색하기</label>
+								<input type="text" id="search" name="search" class="fl" value="" />
+								<input type="button" class="fr" value="검색하기" />
+							</span>
+						</form>
+					</div><!-- class="srch_box" -->
+					<div class="main_content cf">
+						<div class="button">
+							<div class="inter"><a href="#" class="tap_menu"><img src="images/tap_menu01_off.jpg" alt="내과" /></a></div>
+							<div class="gener"><a href="#" class="tap_menu"><img src="images/tap_menu02_off.jpg" alt="외과" /></a></div>
+							<div class="dent"><a href="#" class="tap_menu"><img src="images/tap_menu03_off.jpg" alt="치과" /></a></div>
+						</div>
+						<div class="medical_list list01 cf">
+							<div class="medical_list_box01">
+								<h3 class="fl"><span>내과</span></h3>
+								<ul class="fl">
+									<li class="fl"><a href="#">감염내과</a></li>
+									<li class="fl"><a href="#">내분비내과</a></li>
+									<li class="fl"><a href="#">대사내과</a></li>
+									<li class="fl"><a href="#">류마티스내과</a></li>
+									<li class="fl"><a href="#">소회기내과</a></li>
+									<li class="fl cb"><a href="#">신장내과</a></li>
+									<li class="fl"><a href="#">심장내과</a></li>
+									<li class="fl"><a href="#">종양/혈액내과</a></li>
+									<li class="fl"><a href="#">호흡기내과</a></li>
+									<li class="fl"><a href="#">알레르기내과</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="medical_list list02 cf">
+							<div class="medical_list_box02">
+								<h3 class="fl"><span>외과</span></h3>
+								<ul class="fl">
+									<li class="fl"><a href="#">간담이식혈관외과</a></li>
+									<li class="fl"><a href="#">내분비내과</a></li>
+									<li class="fl"><a href="#">대사내과</a></li>
+									<li class="fl"><a href="#">류마티스내과</a></li>
+									<li class="fl"><a href="#">소회기내과</a></li>
+									<li class="fl cb"><a href="#">신장내과</a></li>
+									<li class="fl"><a href="#">심장내과</a></li>
+									<li class="fl"><a href="#">종양/혈액내과</a></li>
+									<li class="fl"><a href="#">호흡기내과</a></li>
+									<li class="fl"><a href="#">알레르기내과</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="medical_list list03 cf">
+							<div class="medical_list_box03">
+								<h3 class="fl"><span>치과</span></h3>
+								<ul class="fl">
+									<li class="fl"><a href="#">치과교정과</a></li>
+									<li class="fl"><a href="#">구강내과</a></li>
+									<li class="fl"><a href="#">영상치의학사</a></li>
+									<li class="fl"><a href="#">구강악안면외과</a></li>
+									<li class="fl"><a href="#">치과보존과</a></li>
+									<li class="fl cb"><a href="#">치과보철과</a></li>
+									<li class="fl"><a href="#">소아치과</a></li>
+									<li class="fl"><a href="#">취주과</a></li>
+								</ul>
+							</div>
+						</div>
+					</div><!-- class="main_content" -->
+					<div class="doctor_list cf">
+						<h3>감염내과</h3>
+						<div class="doctor_box cf">
+							<ul>
+								<li class="cf">
+									<img src="images/doctor01.png"  width="210" height="230" alt="박태선교수" />
+									<div class="doctor_inner fl">
+										<strong>박태선교수</strong>
+										<ul class="info">
+											<li><strong>진료과</strong>내분비/대사내과</li>
+											<li><strong>전문분야</strong>당료병/갑상선질환/골다고증/비만/부신질환</li>
+										</ul>
+										<div class="btn fr">
+											<a href="#">진료예약</a>
+											<a href="#">의료진소개</a>
+										</div>
+									</div>
+								</li>
+								<li class="cf">
+									<img src="images/doctor02.png"  width="210" height="230" alt="박지현교수" />
+									<div class="doctor_inner fl">
+										<strong>박지현교수</strong>
+										<ul class="info">
+											<li><strong>진료과</strong>내분비/대사내과</li>
+											<li><strong>전문분야</strong>당료병/갑상선질환/골다고증/비만/부신질환</li>
+										</ul>
+										<div class="btn fr">
+											<a href="#">진료예약</a>
+											<a href="#">의료진소개</a>
+										</div>
+									</div>
+								</li>
+								<li class="cf">
+									<img src="images/doctor03.png"  width="210" height="230" alt="박태선교수" />
+									<div class="doctor_inner fl">
+										<strong>이경애교수</strong>
+										<ul class="info">
+											<li><strong>진료과</strong>내분비/대사내과</li>
+											<li><strong>전문분야</strong>당료병/갑상선질환/골다고증/비만/부신질환</li>
+										</ul>
+										<div class="btn fr">
+											<a href="#">진료예약</a>
+											<a href="#">의료진소개</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div><!-- class="doctor_list" -->
+				</div><!-- id="content" -->
+			</div><!-- id="content" -->
+		</div><!-- id="section" -->
+		<div id="footer" class="cf">
+			<div id="address" class="cf">
+				<div id="foot_left" class="cf">
+					<ul class="cf">
+						<li class="fl"><a href="#">개인정보처리방침</a></li>
+						<li class="fl"><a href="#">영상정보처리기기운영방침</a></li>
+						<li class="fl last"><a href="#">환자권리장전</a></li>
+					</ul>
+					<address>
+[54907] 전북 전주시 덕진구 건지로 20 | 대표전화 : 1577-7877 <br />
+Copyright ⓒ 2016 By Chonbuk National University Hospital. All Right Reserved
+					</address>
+					<div id="etc">
+						<a href="#"><img src="../images/ISMS.png" alt="" /></a>
+						<a href="#"><img src="../images/confirm01.png" alt="" /></a>
+						<a href="#"><img src="../images/confirm02.png" alt="" /></a>
+					</div>
+				</div><!-- id="foot_left" -->
+				<div id="foot_cen" class="cf">
+					<h3>대표전화</h3>
+					<p>1577-7877</p>
+					<span>문의시간 : 08:00 - 18:00</span>
+					<span class="last">최상의 서비스를 제공합니다.</span>
+				</div><!-- id="foot_cen" -->
+				<div id="foot_right">
+					<dl>
+						<dt class="fl">FAMILYSITE ▶</dt>
+						<dd class="fl">
+							<ul>
+								<li><a href="#">전북대학교</a></li>
+								<li><a href="#">전북의학전문대학원</a></li>
+								<li><a href="#">전북치의학전문대학원</a></li>
+								<li><a href="#">전북건강증진센터</a></li>
+								<li><a href="#">전북해바라기아동센터</a></li>
+								<li><a href="#">전북시정신보건센터</a></li>
+							</ul>
+						</dd>
+					</dl>
+				</div><!-- id="foot_right" -->
+			</div><!-- id="address" -->
+			<div id="footer_menu">
+				<ul>
+					<li class="footer_list foot_list01"><a href="#">병원이용안내</a></li>
+					<li class="footer_list foot_list02"><a href="#">전화번호안내</a></li>
+					<li class="footer_list foot_list03"><a href="#">오시는길</a></li>
+					<li class="footer_list foot_list04"><a href="#">증명서발급</a></li>
+					<li class="footer_list foot_list05"><a href="#">E-IRB</a></li>
+					<li class="footer_list foot_list06"><a href="#">채용공고</a></li>
+					<li class="footer_list foot_list07"><a href="#">입찰공고</a></li>
+					<li class="home">
+						<a href="#"><i class="fas fa-home"></i><span class="tit">HOME</span></a>
+					</li>
+					<li class="top">
+						<a href="#"><i class="fas fa-angle-up"></i><span class="tit">TOP</span></a>
+					</li>
+				</ul>
+			</div><!-- id="footer_menu" -->
+		</div><!-- id="footer" -->
+	</div>
+</body>
+</html>

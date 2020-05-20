@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+a,span,p,h1,h2,h3,h4,h5,h6,em{ font-family:'Noto Sans KR','¸¼Àº °íµñ','µ¸¿ò',Dotum, sans-serif;}
+
+ /* font-family: 'Noto Sans KR', sans-serif; */
+/* *********** ·Î±×ÀÎ¹Ú½º  ºÎºÐ ************/
+
+#login_box{width:900px; padding-top:100px; margin: 0 auto; border:1px solid #dddddd; border-top:2px solid #004176;}
+#login_box>div:first-child{width:700px; padding-left:200px; margin-bottom:80px;}
+#login_form{width:500px;}
+#login_form h3{height:40px; margin-bottom:25px; line-height:40px; font-size:25px; color:#333333; font-weight:700;  font-family:'Noto Sans KR', sans-serif;}
+#login_form fieldset{width:500px;}
+#login_form legend{display:none;}
+#login{width:340px; height:90px; float:left;}
+#login p{display:block; width:340px; height:90px;}
+#login input{width:318px; height:28px; padding:5px 10px; font-family:'Noto Sans KR', sans-serif; border:1px solid #dddddd;}
+#login input:first-child{margin-bottom:10px;}
+#btn_login{width:150px; height:90px; float:right; background-color:#004176; font-size:15px; color:#ffffff; font-weight:700;  font-family:'Noto Sans KR', sans-serif;}
+#btn1{width:500px; padding-top:10px; clear:both;}
+#btn1 input{width:15px; height:15px; margin-right:5px; float:left;}
+#btn1 label{height:15px; float:left; line-height:15px; font-size:13px; color:#333333; font-family:'Noto Sans KR', sans-serif;}
+#btn1 a{height:15px; float:right; line-height:15px; font-size:13px; color:#333333; font-family:'Noto Sans KR', sans-serif;}
+
+.input_text{color:#999999; font-size:12px;}
+
+#join_box{width:900px; height:200px; background-color:#efefef;}
+.join_txt{width:569px; height:140px; padding:30px; border-right:1px solid #dddddd;}
+.join_txt p{font-size:13px; color:#777777; font-family:'Noto Sans KR', sans-serif; text-align:justify;}
+.join_txt p em{font-size:13px; color:#0065b8; font-family:'Noto Sans KR', sans-serif;font-style:normal;}
+.join_btn{display:block; width:148px; height:43px; margin:25px auto 0; line-height:43px; text-align:center; font-size:14px; color:#333333; background-color:#ffffff; font-family:'Noto Sans KR', sans-serif; border:1px solid #0065b8;}
+
+.email{width:270px; height:200px; float:left;}
+.email_btn{display:block; width:190px; height:45px; margin:77px auto 0; line-height:45px; text-align:center; font-size:14px; color:#ffffff; background-color:#0065b8; font-family:'Noto Sans KR', sans-serif; }
+.email_btn:hover{background-color:#5c9dd1;}
